@@ -2,11 +2,11 @@ package intersectionoftwoarrays
 
 func intersection(nums1 []int, nums2 []int) []int {
 	res := make([]int, 0)
-	m := make(map[int]int, 0)
+	m := make(map[int]struct{}, 0)
 
 	for _, i := range nums1 {
 		if _, ok := m[i]; !ok {
-			m[i] = 1
+			m[i] = struct{}{}
 		}
 	}
 
