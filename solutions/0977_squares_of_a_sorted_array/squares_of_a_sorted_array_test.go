@@ -18,7 +18,7 @@ type output struct {
 	expected []int
 }
 
-func TestSquaresOfasortedarray(t *testing.T) {
+func TestSortedSquares(t *testing.T) {
 	tcs := []testcase{
 		testcase{
 			input{[]int{-4, -1, 0, 3, 10}},
@@ -33,7 +33,7 @@ func TestSquaresOfasortedarray(t *testing.T) {
 	for _, tc := range tcs {
 		got := sortedSquares(tc.input.nums)
 		if !reflect.DeepEqual(got, tc.output.expected) {
-			t.Errorf("test case failed: input=%v, expected=%d, got=%d", tc.input, tc.output.expected, got)
+			t.Errorf("test case failed: input=%v, expected=%v, got=%v", tc.input, tc.output.expected, got)
 		}
 	}
 }
